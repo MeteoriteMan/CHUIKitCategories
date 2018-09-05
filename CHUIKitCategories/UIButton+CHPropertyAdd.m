@@ -45,10 +45,10 @@ static char *ch_shouldHighlightedKey = "ch_shouldHighlightedKey";
 }
 
 - (UIEdgeInsets)ch_contentEdgeInsets {
-    NSValue *value = objc_getAssociatedObject(self, ch_contentEdgeInsetsKey);
-    if(value) {
+    NSValue *ch_contentEdgeInsets = objc_getAssociatedObject(self, ch_contentEdgeInsetsKey);
+    if(ch_contentEdgeInsets) {
         UIEdgeInsets edgeInsets;
-        [value getValue:&edgeInsets];
+        [ch_contentEdgeInsets getValue:&edgeInsets];
         return edgeInsets;
     }else {
         return UIEdgeInsetsZero;

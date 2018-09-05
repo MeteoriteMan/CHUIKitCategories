@@ -18,12 +18,12 @@
 
 @property (nonatomic ,strong) UIFont *ch_messageFont;
 
-///// 标题
-//@property (nonatomic ,strong) NSAttributedString *ch_attributedTitle;
-//
-///// 详细文字
-//@property (nonatomic ,strong) NSAttributedString *ch_attributedMessage;
-//
+/// 标题
+@property (nonatomic ,strong) NSAttributedString *ch_attributedTitle;
+
+/// 详细文字
+@property (nonatomic ,strong) NSAttributedString *ch_attributedMessage;
+
 ///// 意义不明
 //@property (nonatomic ,strong) NSAttributedString *ch_attributedDetailMessage;
 

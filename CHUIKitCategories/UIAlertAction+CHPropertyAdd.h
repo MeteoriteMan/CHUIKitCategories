@@ -13,4 +13,7 @@
 /// 按钮颜色
 @property (nonatomic ,strong) UIColor *ch_titleColor;
 
+/// 按钮文字排布
+@property (nonatomic ,assign) NSTextAlignment ch_titleTextAlignment;
+
 @end

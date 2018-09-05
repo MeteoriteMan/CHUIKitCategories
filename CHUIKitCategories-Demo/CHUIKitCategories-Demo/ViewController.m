@@ -25,6 +25,8 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"123" message:@"345" preferredStyle:UIAlertControllerStyleAlert];
             alertController.title = @"345";
+        alertController.ch_titleColor = [UIColor redColor];
+        alertController.ch_titleFont = [UIFont systemFontOfSize:20 weight:UIFontWeightMedium];
 
         UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"123" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
 
@@ -40,7 +42,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     unsigned int a;
-    Ivar *ivar = class_copyIvarList([UIAlertController class], &a);
+    Ivar *ivar = class_copyIvarList([UIAlertAction class], &a);
     for (unsigned int i = 0; i < a; i++) {
         Ivar i_v = ivar[i];
         NSLog(@"name:%@",[NSString stringWithFormat:@"%s", ivar_getName(i_v)]);

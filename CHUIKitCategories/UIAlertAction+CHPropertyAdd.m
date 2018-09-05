@@ -12,11 +12,23 @@
 @implementation UIAlertAction (CHPropertyAdd)
 
 @dynamic ch_titleColor;
+@dynamic ch_titleTextAlignment;
 
-static char *ch_titleColorKey = "titleTextColor";///按钮title颜色
+static char *ch_titleColorKey = "ch_titleTextColor";///按钮title颜色
+static char *ch_titleTextAlignmentKey = "ch_titleTextAlignment";
 
 /// 系统私有属性
-static NSString *titleTextColor = @"titleTextColor";
+static NSString *titleTextColorKey = @"titleTextColor";
+static NSString *titleTextAlignmentKey = @"titleTextAlignment";
+
+- (void)setCh_titleColor:(UIColor *)ch_titleColor {
+    objc_setAssociatedObject(self, ch_titleColorKey, ch_titleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self setValue:ch_titleColor forKey:titleTextColorKey];
+}
+
+- (void)setCh_titleTextAlignment:(NSTextAlignment)ch_titleTextAlignment {
+    objc_setAssociatedObject(self, ch_titleTextAlignmentKey, @(ch_titleTextAlignment), OBJC_ASSOCIATION_ASSIGN);
+}
 
 - (UIColor *)ch_titleColor {
     id color = objc_getAssociatedObject(self, ch_titleColorKey);
@@ -28,10 +40,15 @@ static NSString *titleTextColor = @"titleTextColor";
     return objc_getAssociatedObject(self, ch_titleColorKey);
 }
 
-- (void)setCh_titleColor:(UIColor *)ch_titleColor {
-    objc_setAssociatedObject(self, ch_titleColorKey, ch_titleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [self setValue:ch_titleColor forKey:titleTextColor];
+- (NSTextAlignment)ch_titleTextAlignment {
+    id ch_titleTextAlignment = objc_getAssociatedObject(self, ch_titleTextAlignmentKey);
+    if (ch_titleTextAlignment) {
+        NSTextAlignment textAlignment;
+        [ch_titleTextAlignment getValue:&textAlignment];
+        return textAlignment;
+    } else {
+        return NSTextAlignmentCenter;
+    }
 }
-
 
 @end

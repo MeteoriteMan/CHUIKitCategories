@@ -15,16 +15,21 @@
 @dynamic ch_titleFont;
 @dynamic ch_messageColor;
 @dynamic ch_messageFont;
+@dynamic ch_attributedTitle;
+@dynamic ch_attributedMessage;
 
 static char *ch_titleColorKey = "ch_titleColorKey";
 static char *ch_titleFontKey = "ch_titleFontKey";
 static char *ch_messageColorKey = "ch_messageColorKey";
 static char *ch_messageFontKey = "ch_messageFontKey";
-
+static char *ch_attributedTitleKey = "ch_attributedTitleKey";
+static char *ch_attributedMessageKey = "ch_attributedMessageKey";
 
 /// 系统的私有属性
 static NSString *attributedTitleKey = @"attributedTitle";
 static NSString *attributedMessageKey = @"attributedMessage";
+//static NSString *titleMaximumLineCountKey = @"titleMaximumLineCount";
+//static NSString *titleLineBreakModeKey = @"titleLineBreakMode";
 
 #pragma mark setter
 - (void)setCh_titleColor:(UIColor *)ch_titleColor {
@@ -51,41 +56,68 @@ static NSString *attributedMessageKey = @"attributedMessage";
     [self setValue:attributedString forKey:attributedTitleKey];
 }
 
+- (void)setCh_attributedTitle:(NSAttributedString *)ch_attributedTitle {
+    objc_setAssociatedObject(self, ch_attributedTitleKey, ch_attributedTitle, OBJC_ASSOCIATION_RETAIN);
+    [self setValue:ch_attributedTitle forKey:attributedTitleKey];
+}
+
+- (void)setCh_attributedMessage:(NSAttributedString *)ch_attributedMessage {
+    objc_setAssociatedObject(self, ch_attributedMessageKey, ch_attributedMessage, OBJC_ASSOCIATION_RETAIN);
+}
+
 #pragma mark getter
 
 - (UIColor *)ch_titleColor {
-    id color = objc_getAssociatedObject(self, ch_titleColorKey);
-    if (color == nil) {
-        return [UIColor darkTextColor];
+    id ch_titleColor = objc_getAssociatedObject(self, ch_titleColorKey);
+    if (ch_titleColor) {
+        return ch_titleColor;
     } else {
-        return color;
+        return [UIColor darkTextColor];
     }
 }
 
 - (UIFont *)ch_titleFont {
-    id font = objc_getAssociatedObject(self, ch_titleFontKey);
-    if (font == nil) {
-        return [UIFont systemFontOfSize:15];
+    id ch_titleFont = objc_getAssociatedObject(self, ch_titleFontKey);
+    if (ch_titleFont) {
+        return ch_titleFont;
     } else {
-        return font;
+        return [UIFont systemFontOfSize:15];
     }
 }
 
 - (UIColor *)ch_messageColor {
-    id color = objc_getAssociatedObject(self, ch_messageColorKey);
-    if (color == nil) {
-        return [UIColor darkGrayColor];
+    id ch_messageColor = objc_getAssociatedObject(self, ch_messageColorKey);
+    if (ch_messageColor) {
+        return ch_messageColor;
     } else {
-        return color;
+        return [UIColor darkGrayColor];
     }
 }
 
 - (UIFont *)ch_messageFont {
-    id font = objc_getAssociatedObject(self, ch_messageFontKey);
-    if (font == nil) {
-        return [UIFont systemFontOfSize:13];
+    id ch_messageFont = objc_getAssociatedObject(self, ch_messageFontKey);
+    if (ch_messageFont) {
+        return ch_messageFont;
     } else {
-        return font;
+        return [UIFont systemFontOfSize:13];
+    }
+}
+
+- (NSAttributedString *)ch_attributedTitle {
+    id ch_attributedTitle = objc_getAssociatedObject(self, ch_attributedTitleKey);
+    if (ch_attributedTitle) {
+        return ch_attributedTitle;
+    } else {
+        return [[NSAttributedString alloc] init];
+    }
+}
+
+- (NSAttributedString *)ch_attributedMessage {
+    id ch_attributedMessage = objc_getAssociatedObject(self, ch_attributedMessageKey);
+    if (ch_attributedMessage) {
+        return ch_attributedMessage;
+    } else {
+        return [[NSAttributedString alloc] init];
     }
 }
 

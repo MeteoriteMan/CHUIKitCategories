@@ -22,27 +22,33 @@
 
 //    self.view.backgroundColor = [UIColor redColor];
 
-    dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"123" message:@"345" preferredStyle:UIAlertControllerStyleAlert];
-            alertController.title = @"345";
-        alertController.ch_titleColor = [UIColor redColor];
-        alertController.ch_titleFont = [UIFont systemFontOfSize:20 weight:UIFontWeightMedium];
-
-        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"123" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-
-        }];
-        [alertController addAction:alertAction];
-
-        [self presentViewController:alertController animated:YES completion:^{
-
-        }];
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"123" message:@"345" preferredStyle:UIAlertControllerStyleAlert];
+//            alertController.title = @"345";
+//        alertController.ch_titleColor = [UIColor redColor];
+//        alertController.ch_titleFont = [UIFont systemFontOfSize:20 weight:UIFontWeightMedium];
+//
+//        NSAttributedString *string = [[NSAttributedString alloc] initWithString:@"呵呵哒" attributes:@{}];
+//        [alertController setValue:string forKey:@"attributedDetailMessage"];
+//
+//        UIAlertAction *alertAction = [UIAlertAction actionWithTitle:@"123" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//
+//        }];
+//        alertAction.ch_titleColor = [UIColor greenColor];
+//        alertAction.ch_titleTextAlignment = NSTextAlignmentLeft;
+//        alertAction.ch_image = [[UIImage imageNamed:@"电脑"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];;
+//        [alertController addAction:alertAction];
+//
+//        [self presentViewController:alertController animated:YES completion:^{
+//
+//        }];
+//    });
 
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     unsigned int a;
-    Ivar *ivar = class_copyIvarList([UIAlertAction class], &a);
+    Ivar *ivar = class_copyIvarList([UISearchBar class], &a);
     for (unsigned int i = 0; i < a; i++) {
         Ivar i_v = ivar[i];
         NSLog(@"name:%@",[NSString stringWithFormat:@"%s", ivar_getName(i_v)]);

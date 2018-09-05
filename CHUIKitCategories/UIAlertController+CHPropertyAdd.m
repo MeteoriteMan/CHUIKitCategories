@@ -17,6 +17,8 @@
 @dynamic ch_messageFont;
 @dynamic ch_attributedTitle;
 @dynamic ch_attributedMessage;
+@dynamic ch_attributedDetailMessage;
+@dynamic ch_actions;
 
 static char *ch_titleColorKey = "ch_titleColorKey";
 static char *ch_titleFontKey = "ch_titleFontKey";
@@ -24,14 +26,19 @@ static char *ch_messageColorKey = "ch_messageColorKey";
 static char *ch_messageFontKey = "ch_messageFontKey";
 static char *ch_attributedTitleKey = "ch_attributedTitleKey";
 static char *ch_attributedMessageKey = "ch_attributedMessageKey";
+static char *ch_attributedDetailMessageKey = "ch_attributedDetailMessageKey";
+static char *ch_actionsKey = "ch_actionsKey";
 
 /// 系统的私有属性
 static NSString *attributedTitleKey = @"attributedTitle";
 static NSString *attributedMessageKey = @"attributedMessage";
+static NSString *attributedDetailMessageKey = @"attributedDetailMessage";
+static NSString *actionsKey = @"actions";
 //static NSString *titleMaximumLineCountKey = @"titleMaximumLineCount";
 //static NSString *titleLineBreakModeKey = @"titleLineBreakMode";
 
 #pragma mark setter
+
 - (void)setCh_titleColor:(UIColor *)ch_titleColor {
     objc_setAssociatedObject(self, ch_titleColorKey, ch_titleColor, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:self.title attributes:@{NSFontAttributeName:self.ch_titleFont,NSForegroundColorAttributeName:ch_titleColor}];
@@ -63,6 +70,17 @@ static NSString *attributedMessageKey = @"attributedMessage";
 
 - (void)setCh_attributedMessage:(NSAttributedString *)ch_attributedMessage {
     objc_setAssociatedObject(self, ch_attributedMessageKey, ch_attributedMessage, OBJC_ASSOCIATION_RETAIN);
+    [self setValue:ch_attributedMessage forKey:attributedMessageKey];
+}
+
+- (void)setCh_attributedDetailMessage:(NSAttributedString *)ch_attributedDetailMessage {
+    objc_setAssociatedObject(self, ch_attributedDetailMessageKey, ch_attributedDetailMessage, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self setValue:ch_attributedDetailMessage forKey:attributedDetailMessageKey];
+}
+
+- (void)setCh_actions:(NSArray *)ch_actions {
+    objc_setAssociatedObject(self, ch_actionsKey, ch_actions, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self setValue:ch_actions forKey:actionsKey];
 }
 
 #pragma mark getter
@@ -108,7 +126,7 @@ static NSString *attributedMessageKey = @"attributedMessage";
     if (ch_attributedTitle) {
         return ch_attributedTitle;
     } else {
-        return [[NSAttributedString alloc] init];
+        return [self valueForKey:attributedTitleKey];
     }
 }
 
@@ -117,7 +135,25 @@ static NSString *attributedMessageKey = @"attributedMessage";
     if (ch_attributedMessage) {
         return ch_attributedMessage;
     } else {
-        return [[NSAttributedString alloc] init];
+        return [self valueForKey:attributedMessageKey];
+    }
+}
+
+- (NSAttributedString *)ch_attributedDetailMessage {
+    id ch_attributedDetailMessage = objc_getAssociatedObject(self, ch_attributedDetailMessageKey);
+    if (ch_attributedDetailMessage) {
+        return ch_attributedDetailMessage;
+    } else {
+        return [self valueForKey:attributedDetailMessageKey];
+    }
+}
+
+- (NSArray *)ch_actions {
+    id ch_actions = objc_getAssociatedObject(self, ch_actionsKey);
+    if (ch_actions) {
+        return ch_actions;
+    } else {
+        return [self valueForKey:actionsKey];
     }
 }
 

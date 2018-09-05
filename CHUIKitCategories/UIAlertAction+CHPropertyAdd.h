@@ -10,10 +10,14 @@
 
 @interface UIAlertAction (CHPropertyAdd)
 
+/// 按钮文字排布
+@property (nonatomic ,assign) NSTextAlignment ch_titleTextAlignment;
+
 /// 按钮颜色
 @property (nonatomic ,strong) UIColor *ch_titleColor;
 
-/// 按钮文字排布
-@property (nonatomic ,assign) NSTextAlignment ch_titleTextAlignment;
+@property (nonatomic ,strong) UIColor *ch_imageTintColor;
+
+@property (nonatomic ,strong) UIImage *ch_image;
 
 @end

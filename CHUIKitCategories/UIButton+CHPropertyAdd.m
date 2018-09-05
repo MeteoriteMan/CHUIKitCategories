@@ -27,12 +27,10 @@ static char *ch_shouldHighlightedKey = "ch_shouldHighlightedKey";
     method_exchangeImplementations(layoutSubviews, ch_layoutSubviews);
 }
 
+#pragma mark setter
+
 - (void)setCh_alignmentType:(CHUIButtonPropertyAlignmentType)ch_alignmentType {
     objc_setAssociatedObject(self, ch_alignmentTypeKey, @(ch_alignmentType), OBJC_ASSOCIATION_ASSIGN);
-}
-
-- (CHUIButtonPropertyAlignmentType)ch_alignmentType {
-    return [objc_getAssociatedObject(self, ch_alignmentTypeKey) integerValue];
 }
 
 - (void)setCh_intervalImageTitle:(CGFloat)ch_intervalImageTitle {
@@ -42,6 +40,12 @@ static char *ch_shouldHighlightedKey = "ch_shouldHighlightedKey";
 - (void)setCh_contentEdgeInsets:(UIEdgeInsets)ch_contentEdgeInsets {
     NSValue *value = [NSValue value:&ch_contentEdgeInsets withObjCType:@encode(UIEdgeInsets)];
     objc_setAssociatedObject(self, ch_contentEdgeInsetsKey, value, OBJC_ASSOCIATION_RETAIN);
+}
+
+#pragma mark getter
+
+- (CHUIButtonPropertyAlignmentType)ch_alignmentType {
+    return [objc_getAssociatedObject(self, ch_alignmentTypeKey) integerValue];
 }
 
 - (UIEdgeInsets)ch_contentEdgeInsets {

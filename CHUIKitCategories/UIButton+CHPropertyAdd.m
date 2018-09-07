@@ -78,7 +78,7 @@ static char *ch_shouldHighlightedKey = "ch_shouldHighlightedKey";
 
 - (void)ch_layoutSubviews {
     [self ch_layoutSubviews];
-NSLog(@"2");
+
     UIEdgeInsets ch_contentEdgeInsets = self.ch_contentEdgeInsets;
     CGFloat ch_contentEdgeInsetsTop = ch_contentEdgeInsets.top;
     CGFloat ch_contentEdgeInsetsLeft = ch_contentEdgeInsets.left;

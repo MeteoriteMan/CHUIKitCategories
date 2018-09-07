@@ -12,6 +12,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
 @end
 
 @implementation ViewController
@@ -44,19 +46,35 @@
 //        }];
 //    });
 
+    self.textView.ch_placeholderText = @"这是占位文字";
+//    if (@available(iOS 11.0, *)) {
+//        [UICollectionView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+//    } else {
+//        // Fallback on earlier versions
+//    }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     unsigned int a;
-    Ivar *ivar = class_copyIvarList([UISearchBar class], &a);
+    Ivar *ivar = class_copyIvarList([UITextField class], &a);
     for (unsigned int i = 0; i < a; i++) {
         Ivar i_v = ivar[i];
         NSLog(@"name:%@",[NSString stringWithFormat:@"%s", ivar_getName(i_v)]);
-        NSLog(@"type:%@",[NSString stringWithFormat:@"%s",ivar_getTypeEncoding(i_v)]);
+        NSLog(@"type:%@",[NSString stringWithFormat:@"%s", ivar_getTypeEncoding(i_v)]);
         printf("\n");
 //        printf("name:%s--type%s\n",ivar_getName(i_v),ivar_getTypeEncoding(i_v));
     }
     free(ivar);
+
+//    unsigned int m;
+//    Method *method = class_copyMethodList([UITextView class], &m);
+//    for (unsigned int i = 0; i < m; i++) {
+//        Method m_e = method[i];
+//        NSLog(@"name:%@",[NSString stringWithFormat:@"%s", sel_getName(method_getName(m_e))]);
+//        printf("\n");
+//    }
+//    free(method);
+
 }
 
 - (void)didReceiveMemoryWarning {

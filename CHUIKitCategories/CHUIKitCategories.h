@@ -12,6 +12,7 @@
 #import "UIButton+CHPropertyAdd.h"
 #import "UIAlertAction+CHPropertyAdd.h"
 #import "UIAlertController+CHPropertyAdd.h"
+#import "UITextView+CHPropertyAdd.h"
 
 
 #endif /* CHUIKitCategories_h */

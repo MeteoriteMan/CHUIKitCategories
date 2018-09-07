@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43073BCA2141236300FF95ED /* UITextView+CHPropertyAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 43073BC92141236300FF95ED /* UITextView+CHPropertyAdd.m */; };
 		4396A0A6213ECF530037E9D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396A0A5213ECF530037E9D2 /* AppDelegate.m */; };
 		4396A0A9213ECF530037E9D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396A0A8213ECF530037E9D2 /* ViewController.m */; };
 		4396A0AC213ECF530037E9D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4396A0AA213ECF530037E9D2 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		43073BC82141236300FF95ED /* UITextView+CHPropertyAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+CHPropertyAdd.h"; sourceTree = "<group>"; };
+		43073BC92141236300FF95ED /* UITextView+CHPropertyAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+CHPropertyAdd.m"; sourceTree = "<group>"; };
 		4396A0A1213ECF530037E9D2 /* CHUIKitCategories-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHUIKitCategories-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4396A0A4213ECF530037E9D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4396A0A5213ECF530037E9D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 				4396A0BE213ECF740037E9D2 /* UIAlertController+CHPropertyAdd.m */,
 				4396A0BD213ECF740037E9D2 /* UIAlertAction+CHPropertyAdd.h */,
 				4396A0C0213ECF740037E9D2 /* UIAlertAction+CHPropertyAdd.m */,
+				43073BC82141236300FF95ED /* UITextView+CHPropertyAdd.h */,
+				43073BC92141236300FF95ED /* UITextView+CHPropertyAdd.m */,
 			);
 			name = CHUIKitCategories;
 			path = ../../CHUIKitCategories;
@@ -173,6 +178,7 @@
 				4396A0C1213ECF740037E9D2 /* UIAlertController+CHPropertyAdd.m in Sources */,
 				4396A0C3213ECF740037E9D2 /* UIAlertAction+CHPropertyAdd.m in Sources */,
 				4396A0A6213ECF530037E9D2 /* AppDelegate.m in Sources */,
+				43073BCA2141236300FF95ED /* UITextView+CHPropertyAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F22VTWNS57;
 				INFOPLIST_FILE = "CHUIKitCategories-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,7 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F22VTWNS57;
 				INFOPLIST_FILE = "CHUIKitCategories-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

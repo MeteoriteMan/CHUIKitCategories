@@ -52,11 +52,20 @@
 //    } else {
 //        // Fallback on earlier versions
 //    }
+
+    UISearchBar *searchBar = [[UISearchBar alloc] init];
+    searchBar.showsCancelButton = YES;
+    searchBar.ch_searchField.placeholder = @"12313132";
+    [searchBar.ch_cancelButton setTitle:@"我要取消" forState:UIControlStateNormal];
+//    UIView *ch_background = searchBar.ch_background;
+    searchBar.showsScopeBar = YES;
+    self.navigationItem.titleView = searchBar;
+
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     unsigned int a;
-    Ivar *ivar = class_copyIvarList([UITextField class], &a);
+    Ivar *ivar = class_copyIvarList([UISearchBar class], &a);
     for (unsigned int i = 0; i < a; i++) {
         Ivar i_v = ivar[i];
         NSLog(@"name:%@",[NSString stringWithFormat:@"%s", ivar_getName(i_v)]);

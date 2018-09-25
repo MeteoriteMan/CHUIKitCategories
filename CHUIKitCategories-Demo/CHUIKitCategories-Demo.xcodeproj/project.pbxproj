@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4305892121493CA800C82520 /* UISearchBar+CHPropertyAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4305892021493CA800C82520 /* UISearchBar+CHPropertyAdd.m */; };
 		43073BCA2141236300FF95ED /* UITextView+CHPropertyAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 43073BC92141236300FF95ED /* UITextView+CHPropertyAdd.m */; };
+		4381424A2151F54900C2E395 /* UIPageControl+CHPropertyAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 438142492151F54900C2E395 /* UIPageControl+CHPropertyAdd.m */; };
 		4396A0A6213ECF530037E9D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396A0A5213ECF530037E9D2 /* AppDelegate.m */; };
 		4396A0A9213ECF530037E9D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396A0A8213ECF530037E9D2 /* ViewController.m */; };
 		4396A0AC213ECF530037E9D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4396A0AA213ECF530037E9D2 /* Main.storyboard */; };
@@ -25,6 +26,8 @@
 		4305892021493CA800C82520 /* UISearchBar+CHPropertyAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+CHPropertyAdd.m"; sourceTree = "<group>"; };
 		43073BC82141236300FF95ED /* UITextView+CHPropertyAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextView+CHPropertyAdd.h"; sourceTree = "<group>"; };
 		43073BC92141236300FF95ED /* UITextView+CHPropertyAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextView+CHPropertyAdd.m"; sourceTree = "<group>"; };
+		438142482151F54900C2E395 /* UIPageControl+CHPropertyAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIPageControl+CHPropertyAdd.h"; sourceTree = "<group>"; };
+		438142492151F54900C2E395 /* UIPageControl+CHPropertyAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIPageControl+CHPropertyAdd.m"; sourceTree = "<group>"; };
 		4396A0A1213ECF530037E9D2 /* CHUIKitCategories-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHUIKitCategories-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4396A0A4213ECF530037E9D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4396A0A5213ECF530037E9D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				43073BC92141236300FF95ED /* UITextView+CHPropertyAdd.m */,
 				4305891F21493CA800C82520 /* UISearchBar+CHPropertyAdd.h */,
 				4305892021493CA800C82520 /* UISearchBar+CHPropertyAdd.m */,
+				438142482151F54900C2E395 /* UIPageControl+CHPropertyAdd.h */,
+				438142492151F54900C2E395 /* UIPageControl+CHPropertyAdd.m */,
 			);
 			name = CHUIKitCategories;
 			path = ../../CHUIKitCategories;
@@ -180,6 +185,7 @@
 				4396A0C2213ECF740037E9D2 /* UIButton+CHPropertyAdd.m in Sources */,
 				4396A0A9213ECF530037E9D2 /* ViewController.m in Sources */,
 				4396A0B4213ECF560037E9D2 /* main.m in Sources */,
+				4381424A2151F54900C2E395 /* UIPageControl+CHPropertyAdd.m in Sources */,
 				4305892121493CA800C82520 /* UISearchBar+CHPropertyAdd.m in Sources */,
 				4396A0C1213ECF740037E9D2 /* UIAlertController+CHPropertyAdd.m in Sources */,
 				4396A0C3213ECF740037E9D2 /* UIAlertAction+CHPropertyAdd.m in Sources */,

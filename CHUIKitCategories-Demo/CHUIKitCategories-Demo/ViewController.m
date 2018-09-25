@@ -64,8 +64,11 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+
+    Class class = [UIPageControl class];
+
     unsigned int a;
-    Ivar *ivar = class_copyIvarList([UISearchBar class], &a);
+    Ivar *ivar = class_copyIvarList(class, &a);
     for (unsigned int i = 0; i < a; i++) {
         Ivar i_v = ivar[i];
         NSLog(@"name:%@",[NSString stringWithFormat:@"%s", ivar_getName(i_v)]);
@@ -75,14 +78,16 @@
     }
     free(ivar);
 
-//    unsigned int m;
-//    Method *method = class_copyMethodList([UITextView class], &m);
-//    for (unsigned int i = 0; i < m; i++) {
-//        Method m_e = method[i];
-//        NSLog(@"name:%@",[NSString stringWithFormat:@"%s", sel_getName(method_getName(m_e))]);
-//        printf("\n");
-//    }
-//    free(method);
+    printf("~~~~~~~~~~\n");
+
+    unsigned int m;
+    Method *method = class_copyMethodList(class, &m);
+    for (unsigned int i = 0; i < m; i++) {
+        Method m_e = method[i];
+        NSLog(@"methodName:%@",[NSString stringWithFormat:@"%s", sel_getName(method_getName(m_e))]);
+        printf("\n");
+    }
+    free(method);
 
 }
 

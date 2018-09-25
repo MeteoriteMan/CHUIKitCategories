@@ -24,7 +24,7 @@ static NSString *ch_pageImageKey = @"pageImage";
     [self setValue:ch_currentPageImage forKey:ch_currentPageImageKey];
 }
 
-- (void)setCh_pageImageKey:(UIImage *)ch_pageImage {
+- (void)setCh_pageImage:(UIImage *)ch_pageImage {
     [self setValue:ch_pageImage forKey:ch_pageImageKey];
 }
 

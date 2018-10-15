@@ -14,7 +14,7 @@
 #import "UIAlertController+CHPropertyAdd.h"
 #import "UITextView+CHPropertyAdd.h"
 #import "UISearchBar+CHPropertyAdd.h"
-
+#import "UIScrollView+CHPropertyAdd.h"
 
 #endif /* CHUIKitCategories_h */
 

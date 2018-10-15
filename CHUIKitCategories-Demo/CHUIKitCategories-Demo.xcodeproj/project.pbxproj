@@ -19,6 +19,7 @@
 		4396A0C1213ECF740037E9D2 /* UIAlertController+CHPropertyAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396A0BE213ECF740037E9D2 /* UIAlertController+CHPropertyAdd.m */; };
 		4396A0C2213ECF740037E9D2 /* UIButton+CHPropertyAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396A0BF213ECF740037E9D2 /* UIButton+CHPropertyAdd.m */; };
 		4396A0C3213ECF740037E9D2 /* UIAlertAction+CHPropertyAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 4396A0C0213ECF740037E9D2 /* UIAlertAction+CHPropertyAdd.m */; };
+		43D9C399215D092300D73420 /* UIScrollView+CHPropertyAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 43D9C398215D092200D73420 /* UIScrollView+CHPropertyAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		4396A0BF213ECF740037E9D2 /* UIButton+CHPropertyAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CHPropertyAdd.m"; sourceTree = "<group>"; };
 		4396A0C0213ECF740037E9D2 /* UIAlertAction+CHPropertyAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertAction+CHPropertyAdd.m"; sourceTree = "<group>"; };
 		4396A0C4213ECF8A0037E9D2 /* CHUIKitCategories.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CHUIKitCategories.h; sourceTree = "<group>"; };
+		43D9C397215D092200D73420 /* UIScrollView+CHPropertyAdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CHPropertyAdd.h"; sourceTree = "<group>"; };
+		43D9C398215D092200D73420 /* UIScrollView+CHPropertyAdd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CHPropertyAdd.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				4305892021493CA800C82520 /* UISearchBar+CHPropertyAdd.m */,
 				438142482151F54900C2E395 /* UIPageControl+CHPropertyAdd.h */,
 				438142492151F54900C2E395 /* UIPageControl+CHPropertyAdd.m */,
+				43D9C397215D092200D73420 /* UIScrollView+CHPropertyAdd.h */,
+				43D9C398215D092200D73420 /* UIScrollView+CHPropertyAdd.m */,
 			);
 			name = CHUIKitCategories;
 			path = ../../CHUIKitCategories;
@@ -191,6 +196,7 @@
 				4396A0C3213ECF740037E9D2 /* UIAlertAction+CHPropertyAdd.m in Sources */,
 				4396A0A6213ECF530037E9D2 /* AppDelegate.m in Sources */,
 				43073BCA2141236300FF95ED /* UITextView+CHPropertyAdd.m in Sources */,
+				43D9C399215D092300D73420 /* UIScrollView+CHPropertyAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

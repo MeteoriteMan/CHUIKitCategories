@@ -65,7 +65,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 
-    Class class = [UIPageControl class];
+    Class class = [UIProgressView class];
 
     unsigned int a;
     Ivar *ivar = class_copyIvarList(class, &a);
